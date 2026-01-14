@@ -1,0 +1,568 @@
+<modDesc descVersion="103">
+    <author>Arrow</author>
+    <version>1.2.1.5</version>
+    <title>
+        <en>Realistic Livestock</en>
+        <de>Realistischer Viehbestand</de>
+        <fr>Bétail Réaliste</fr>
+    </title>
+    <description>
+        <en>
+    <![CDATA[ This is a complete overhaul to the animal system.
+
+- Github:
+https://github.com/Arrow-kb/FS25_RealisticLivestock
+
+Features:
+
+Artificial Insemination & Dewars
+
+- Buy dewars filled with varying amounts of inseminant from pedigree males around the world
+- New object and handtool
+- Manually inseminate females or do it in the menu
+- Offspring will be very good, but insemination has a risk of failure
+
+Herdsman
+
+- Automatically buy, sell, name, castrate and inseminate animals with a wide range of options and filters
+- Pay the herdsman a monthly wage based on his services
+
+Male Animals
+
+- Higher value
+- Required for reproduction
+- No male models (im not a 3d artist)
+
+Visual Animals
+
+- The limit of visual animals per husbandry has been increased from 25 in the vanilla game, up to 200 at maximum which can be changed with a slider
+
+Individual Animals
+
+- All animals are now 100% individual and the archaic cluster system has been scrapped, allowing for more variety in gameplay and animals
+- Every animal has its own unique identifier based on the UK's cattle identification system
+- Every animal has a birthday and a country of origin
+- Every animal can be named
+- Supported animals have ear tags on their left and right ears, detailing their country of origin, farm ID, animal ID, name and birthday, as well as a partial identifier on their behind
+- Supported animals have nose rings
+
+Enhanced Pregnancy System
+
+- Animals of different species have varying amounts of potential offspring per each pregnancy (example: cows can have 0-3 calves)
+- Offspring is created inside the mother when she is impregnated instead of at birth
+- Ability to view the number of expected offspring and their due date
+- The reproduction duration is now unique for every animal, not every animal of the same species will take the same length of time to deliver their offspring
+
+Genetics System
+
+- New genetics system
+- Every animal has several genetic modifiers completely unique to them
+- Current genetics are health, fertility, metabolism, productivity and quality
+- Genetics impact several different areas of the animal, such as pregnancy and sale value
+
+Weight System
+
+- New weight system
+- Every animal has a weight unique to them, and each day they will gravitate to/from their ideal weight (based on their metabolism) due to how much they eat and drink
+- Weight affects sale value and health, and can unhealthy weight can result in death especially for young animals
+
+Enhanced UI
+
+- New family tree visible in the animal screen
+- Lots of additional information is shown in the animal screen and the info box about each animal
+
+Enhanced Production
+
+- Supported animals will have their production based on various factors
+- Cows will only produce milk when lactating, and their yield will rise and fall based on their previous pregnancy
+- Sheep will only produce wool in warm months
+
+Removal and Aging
+
+- Animal aging is no longer limited to 5 years
+- Every animal type has an expected lifespan, and every animal has a chance to be removed due to old age the older they get, but can stay past their expected lifespan
+- Animals can be removed from health, random accidents and bad pregnancies
+
+Enhanced Animal Dealer
+
+- The animal dealer has been completely overhauled
+- Every supported country in the world now has several unique farms, which each produce up to 3 types of animals
+- Each farm will send some of their animals to the animal dealer every day
+- Every animal is unique and is no longer a template, and are generated based on the quality of the farm they come from
+- Every animal sent to the dealer will eventually disappear and will no longer be able to be bought, but will be replaced with new ones
+- Most animals are local to your country, but some will be imported from abroad
+- Animals at the dealer have a chance to be pregnant and will all have unique genetic qualities which will impact their price and usefulness
+
+Changelog:
+
+1.2.1.4
+
+- Compatibility for 1.0.0.6 of FontLibrary
+- Removed access to Highland Cattle if the DLC is not owned
+
+1.2.1.3
+
+- Compatibility for highland cattle
+- Fixed error: attempt to index nil with 'reproductionMinAgeMonth'
+
+1.2.1.2
+
+- Fixed crops not advancing
+
+1.2.1.1
+
+- Diseased animals are now in their own group at the top of the animal menu screen
+- Name and id are now both shown in the animal menu screen list
+- Fixed horses not being found properly after riding other horses
+- Fixed several MP sync issues
+
+1.2.1.0
+
+- Font Library integration
+
+1.2.0.0
+
+- Multiplayer support
+- Added detailed artificial insemination system with new object and handtool
+- Added animal diseases with in-herd transmission, affects on output, and removal chance for severe diseases
+- Added messages tab
+- Added herdsman tab for automatic animal management (buying, selling, castrating, naming, insemination)
+- Added ability to mark animals
+- Added ability to castrate male animals
+- Added straw and manure to chickens and sheep
+- Added setting for using custom animal models such as Vanilla Animal Package - view github for instructions
+- Added genetics information to buy/sell pages
+- Added more variation in genetics for dealer animals
+- Added settings options:
+--- Enable/disable diseases
+--- Change disease chances
+- Fixed time, animal age and crops not progressing after buying an animal from the main dealer
+- Fixed husbandries cant be found in the main dealer
+- Fixed "Max Dealer Animals" setting
+- Fixed settings being reverted
+- Fixed horses not loading properly when not in a pen
+- Fixed inconsistent filter behaviour
+- Many more fixes ]]>
+</en>
+<de>
+    <![CDATA[ Dies ist eine komplette Überarbeitung des Tiersystems.
+
+- Github:
+https://github.com/Arrow-kb/FS25_RealisticLivestock
+
+Merkmale:
+
+Künstliche Befruchtung & Dewars
+
+- Kaufe Dewars, die mit unterschiedlichen Mengen an Sperma von reinrassigen Männchen aus aller Welt gefüllt sind.
+- Neues Objekt und Handwerkzeug.
+- Befruchte Weibchen manuell oder über das Menü.
+- Die Nachkommen werden sehr gut sein, aber die Befruchtung birgt ein Risiko des Scheiterns.
+
+Hirte
+
+- Kaufen, verkaufen, benennen, kastrieren und besamen Sie Tiere automatisch mit einer Vielzahl von Optionen und Filtern.
+- Bezahlen Sie dem Hirten einen monatlichen Lohn für seine Dienste.
+
+Männliche Tiere
+
+- Höherer Wert
+- Für die Reproduktion erforderlich
+- Keine männlichen Modelle (ich bin kein 3d-Künstler)
+
+Visuelle Tiere
+
+- Die Anzahl der visuellen Tiere pro Tierhaltung wurde von 25 im Vanilla-Spiel auf maximal 200 erhöht, was mit einem Schieberegler geändert werden kann
+
+Individuelle Tiere
+
+- Alle Tiere sind nun zu 100% individuell und das archaische Clustersystem wurde abgeschafft, was zu mehr Abwechslung im Gameplay und bei den Tieren führt.
+- Jedes Tier hat seine eigene eindeutige Kennung, die auf dem britischen Rinderkennzeichnungssystem basiert.
+- Jedes Tier hat einen Geburtstag und ein Herkunftsland
+- Jedes Tier kann benannt werden
+- Unterstützte Tiere haben Ohrmarken an ihrem linken und rechten Ohr, auf denen ihr Herkunftsland, ihre Farm-ID, ihre Tier-ID, ihr Name und ihr Geburtstag angegeben sind, sowie eine teilweise Kennzeichnung auf ihrem Rücken
+- Geförderte Tiere haben Nasenringe
+
+Verbessertes Trächtigkeitssystem
+
+- Tiere verschiedener Arten haben eine unterschiedliche Anzahl potenzieller Nachkommen pro Trächtigkeit (Beispiel: Kühe können 0-3 Kälber haben)
+- Die Nachkommen werden im Muttertier erzeugt, wenn es geschwängert wird, und nicht bei der Geburt
+- Möglichkeit, die Anzahl der erwarteten Nachkommen und deren Fälligkeitsdatum anzuzeigen
+- Die Reproduktionsdauer ist jetzt für jedes Tier einzigartig, nicht jedes Tier der gleichen Art braucht gleich lange, um seine Nachkommen zur Welt zu bringen.
+
+Genetisches System
+
+- Neues Genetiksystem
+- Jedes Tier verfügt über mehrere genetische Modifikatoren, die für jedes Tier einzigartig sind
+- Die derzeitigen genetischen Faktoren sind Gesundheit, Fruchtbarkeit, Stoffwechsel, Produktivität und Qualität.
+- Die Genetik wirkt sich auf verschiedene Bereiche des Tieres aus, z. B. auf die Trächtigkeit und den Verkaufswert
+
+Gewichtssystem
+
+- Neues Gewichtssystem
+- Jedes Tier hat ein individuelles Gewicht, und jeden Tag bewegt es sich auf sein Idealgewicht zu oder davon weg (basierend auf seinem Stoffwechsel), je nachdem, wie viel es isst und trinkt
+- Das Gewicht wirkt sich auf den Verkaufswert und die Gesundheit aus, und ungesundes Gewicht kann insbesondere bei Jungtieren zum Tod führen.
+
+Verbessertes UI
+
+- Neuer Stammbaum im Tierbildschirm sichtbar
+- Viele zusätzliche Informationen werden auf dem Tierbildschirm und in der Infobox zu jedem Tier angezeigt
+
+Verbesserte Produktion
+
+- Bei unterstützten Tieren wird die Produktion von verschiedenen Faktoren abhängig gemacht
+- Kühe produzieren nur noch Milch, wenn sie laktieren, und ihr Ertrag steigt und fällt je nach vorheriger Trächtigkeit
+- Schafe produzieren nur in warmen Monaten Wolle
+
+Beseitigung und Alterung
+
+- Die Alterung von Tieren ist nicht mehr auf 5 Jahre begrenzt.
+- Jede Tierart hat eine erwartete Lebensspanne, und jedes Tier hat eine Chance, aufgrund von Alter entfernt zu werden, je älter es wird, kann aber auch über seine erwartete Lebensspanne hinaus bleiben
+- Tiere können aufgrund von Gesundheit, zufälligen Unfällen und schlechten Schwangerschaften entfernt werden
+
+Verbesserter Tierhändler
+
+- Der Tierhändler wurde komplett überarbeitet
+- Jedes unterstützte Land in der Welt hat nun mehrere einzigartige Farmen, die jeweils bis zu 3 Tierarten produzieren
+- Jede Farm schickt jeden Tag einige ihrer Tiere zum Tierhändler
+- Jedes Tier ist einzigartig und keine Vorlage mehr, sondern wird auf der Grundlage der Qualität der Farm, von der es stammt, erzeugt.
+- Jedes Tier, das zum Händler geschickt wird, verschwindet irgendwann und kann nicht mehr gekauft werden, sondern wird durch neue Tiere ersetzt.
+- Die meisten Tiere stammen aus deinem Land, aber einige werden aus dem Ausland importiert.
+- Die Tiere beim Händler haben die Chance, trächtig zu werden, und weisen alle einzigartige genetische Eigenschaften auf, die sich auf ihren Preis und ihren Nutzen auswirken werden.
+
+Änderungsprotokoll:
+
+1.2.0.0
+
+- Multiplayer-Unterstützung
+- Detailliertes System zur künstlichen Befruchtung mit neuem Objekt und Handwerkzeug hinzugefügt
+- Tierkrankheiten mit Übertragung innerhalb der Herde, Auswirkungen auf die Produktion und Entfernungschance für schwere Krankheiten hinzugefügt
+- Registerkarte „Meldungen” hinzugefügt
+- Registerkarte „Hirte” für automatische Tierverwaltung (Kauf, Verkauf, Kastration, Benennung, Befruchtung) hinzugefügt
+- Möglichkeit zum Markieren von Tieren hinzugefügt
+- Möglichkeit zum Kastrieren männlicher Tiere hinzugefügt
+- Stroh und Mist für Hühner und Schafe hinzugefügt
+- Einstellung für die Verwendung benutzerdefinierter Tiermodelle wie Vanilla Animal Package hinzugefügt – Anweisungen siehe GitHub
+- Genetische Informationen zu Kauf-/Verkaufsseiten hinzugefügt
+- Mehr Variation in der Genetik für Tiere von Händlern hinzugefügt
+- Einstellungsoptionen hinzugefügt:
+--- Krankheiten aktivieren/deaktivieren
+--- Krankheitswahrscheinlichkeit ändern
+- Zeit, Tieralter und Erntefortschritt werden nach dem Kauf eines Tieres beim Haupthändler nun korrekt angezeigt
+- Tiere können nun beim Haupthändler gefunden werden
+- Einstellung „Maximale Anzahl Tiere beim Händler” korrigiert
+- Zurücksetzen der Einstellungen korrigiert
+- Pferde werden nun korrekt geladen, wenn sie sich nicht in einem Pferch befinden
+- Inkonsistentes Filterverhalten korrigiert
+- Viele weitere Korrekturen]]>
+</de>
+<fr>
+    <![CDATA[ Il s'agit d'une révision complète du système animalier.
+
+- Github:
+https://github.com/Arrow-kb/FS25_RealisticLivestock
+
+Caractéristiques :
+
+Insémination artificielle et Dewars
+
+- Achetez des Dewars remplis de différentes quantités de sperme provenant de mâles de race pure du monde entier
+- Nouvel objet et nouvel outil manuel
+- Inséminer manuellement les femelles ou le faire dans le menu
+- La progéniture sera de très bonne qualité, mais l'insémination comporte un risque d'échec
+
+Berger
+
+- Achetez, vendez, nommez, castrez et inséminez automatiquement les animaux grâce à un large éventail d'options et de filtres
+- Versez au berger un salaire mensuel en fonction de ses services
+
+Animaux mâles
+
+- Valeur supérieure
+- Nécessaire à la reproduction
+- Pas de modèles masculins (je ne suis pas un artiste 3D)
+
+Animaux visuels
+
+- La limite d'animaux visuels par élevage a été augmentée de 25 dans le jeu vanille, jusqu'à 200 au maximum, ce qui peut être modifié avec un curseur.
+
+Animaux individuels
+
+- Tous les animaux sont désormais 100% individuels et le système archaïque de grappes a été abandonné, ce qui permet une plus grande variété dans le gameplay et les animaux.
+- Chaque animal possède son propre identifiant, basé sur le système d'identification du bétail britannique.
+- Chaque animal a une date de naissance et un pays d'origine.
+- Chaque animal peut être nommé.
+- Les animaux pris en charge ont des étiquettes à l'oreille gauche et à l'oreille droite, qui indiquent leur pays d'origine, l'identifiant de la ferme, l'identifiant de l'animal, leur nom et leur date d'anniversaire, ainsi qu'un identifiant partiel sur leur derrière.
+- Les animaux pris en charge ont des anneaux de nez.
+
+Système de gestation amélioré
+
+- Les animaux de différentes espèces ont des quantités variables de descendants potentiels pour chaque grossesse (exemple : les vaches peuvent avoir de 0 à 3 veaux).
+- La progéniture est créée à l'intérieur de la mère lorsqu'elle est fécondée et non à la naissance.
+- Possibilité d'afficher le nombre de descendants attendus et leur date d'échéance
+- La durée de la reproduction est désormais unique pour chaque animal, tous les animaux de la même espèce ne prendront pas le même temps pour mettre au monde leur progéniture.
+
+Système génétique
+
+- Nouveau système génétique
+- Chaque animal possède plusieurs modificateurs génétiques qui lui sont propres.
+- La génétique actuelle concerne la santé, la fertilité, le métabolisme, la productivité et la qualité.
+- La génétique a un impact sur différents aspects de l'animal, tels que la gestation et la valeur de vente.
+
+Système de poids
+
+- Nouveau système de poids
+- Chaque animal a un poids qui lui est propre et, chaque jour, il se rapproche ou s'éloigne de son poids idéal (en fonction de son métabolisme) en raison de la quantité de nourriture et de boisson qu'il consomme.
+- Le poids affecte la valeur de vente et la santé, et un poids insuffisant peut entraîner la mort, en particulier pour les jeunes animaux.
+
+Amélioration de l'interface utilisateur
+
+- Nouvel arbre généalogique visible sur l'écran de l'animal
+- De nombreuses informations supplémentaires sont affichées sur l'écran des animaux et dans la boîte d'information sur chaque animal.
+
+Production améliorée
+
+- La production des animaux pris en charge est basée sur différents facteurs
+- Les vaches ne produiront du lait que lorsqu'elles sont en lactation, et leur production augmentera et diminuera en fonction de leur grossesse précédente.
+- Les moutons ne produiront de la laine que pendant les mois chauds.
+
+Retrait et vieillissement
+
+- Le vieillissement des animaux n'est plus limité à 5 ans
+- Chaque type d'animal a une durée de vie prévue, et chaque animal a une chance d'être retiré pour cause de vieillesse au fur et à mesure qu'il vieillit, mais il peut rester au-delà de sa durée de vie prévue.
+- Les animaux peuvent être retirés pour des raisons de santé, d'accidents aléatoires et de mauvaises grossesses.
+
+Marchand d'animaux amélioré
+
+- Le marchand d'animaux a été entièrement revu.
+- Chaque pays soutenu dans le monde a maintenant plusieurs fermes uniques, qui produisent chacune jusqu'à 3 types d'animaux.
+- Chaque ferme enverra chaque jour certains de ses animaux au marchand d'animaux.
+- Chaque animal est unique et n'est plus un modèle. Ils sont générés en fonction de la qualité de la ferme d'où ils proviennent.
+- Chaque animal envoyé au marchand d'animaux finira par disparaître et ne pourra plus être acheté, mais sera remplacé par de nouveaux animaux.
+- La plupart des animaux sont originaires de votre pays, mais certains sont importés de l'étranger.
+- Les animaux qui se trouvent chez le négociant ont une chance d'être gestants et ont tous des qualités génétiques uniques qui ont une incidence sur leur prix et leur utilité.
+
+Journal des modifications:
+
+1.2.0.0
+
+- Prise en charge multijoueur
+- Ajout d'un système d'insémination artificielle détaillé avec un nouvel objet et un nouvel outil manuel
+- Ajout de maladies animales transmissibles au sein du troupeau, ayant un impact sur la production et pouvant entraîner l'élimination des animaux atteints de maladies graves
+- Ajout d'un onglet « Messages »
+- Ajout d'un onglet « Berger » pour la gestion automatique des animaux (achat, vente, castration, attribution de noms, insémination)
+- Ajout de la possibilité de marquer les animaux
+- Ajout de la possibilité de castrer les animaux mâles
+- Ajout de la paille et du fumier pour les poulets et les moutons
+- Ajout d'un paramètre pour utiliser des modèles d'animaux personnalisés tels que Vanilla Animal Package - voir github pour les instructions
+- Ajout d'informations génétiques aux pages d'achat/vente
+- Ajout de plus de variations génétiques pour les animaux des marchands
+- Ajout d'options de paramétrage :
+--- Activer/désactiver les maladies
+--- Modifier les chances de maladie
+- Correction du temps, de l'âge des animaux et des cultures qui ne progressaient pas après l'achat d'un animal chez le revendeur principal
+- Correction de l'impossibilité de trouver des élevages chez le revendeur principal
+- Correction du paramètre « Max Dealer Animals »
+- Correction de la réinitialisation des paramètres
+- Correction du chargement incorrect des chevaux lorsqu'ils ne se trouvaient pas dans un enclos
+- Correction du comportement incohérent du filtre
+- Nombreuses autres corrections
+
+]]>
+</fr>
+    </description>
+    <iconFilename>icon_RealisticLivestock.dds</iconFilename>
+    <multiplayer supported="true"/>
+	<dependencies>
+		<dependency version="1.0.0.7">FS25_FontLibrary</dependency>
+	</dependencies>
+    <extraSourceFiles>
+		<sourceFile filename="src/gui/MPLoadingScreen.lua"/>
+        <sourceFile filename="src/animals/husbandry/cluster/RealisticLivestock_AnimalCluster.lua"/>
+        <sourceFile filename="src/animals/husbandry/cluster/RealisticLivestock_AnimalClusterHusbandry.lua"/>
+        <sourceFile filename="src/animals/husbandry/cluster/RealisticLivestock_AnimalClusterSystem.lua"/>
+        <sourceFile filename="src/animals/husbandry/cluster/VisualAnimal.lua"/>
+        <sourceFile filename="src/animals/husbandry/placeables/PlaceableHusbandry.lua"/>
+        <sourceFile filename="src/animals/husbandry/placeables/PlaceableHusbandryLiquidManure.lua"/>
+        <sourceFile filename="src/animals/husbandry/placeables/PlaceableHusbandryStraw.lua"/>
+        <sourceFile filename="src/animals/husbandry/placeables/PlaceableHusbandryWater.lua"/>
+        <sourceFile filename="src/animals/husbandry/placeables/RealisticLivestock_PlaceableHusbandryAnimals.lua"/>
+        <sourceFile filename="src/animals/husbandry/placeables/RealisticLivestock_PlaceableHusbandryMilk.lua"/>
+        <sourceFile filename="src/animals/husbandry/placeables/RealisticLivestock_PlaceableHusbandryFood.lua"/>
+        <sourceFile filename="src/animals/husbandry/placeables/RealisticLivestock_PlaceableHusbandryPallets.lua"/>
+        <sourceFile filename="src/animals/husbandry/AnimalSystemStateEvent.lua"/>
+        <sourceFile filename="src/animals/husbandry/RealisticLivestock_HusbandrySystem.lua"/>
+        <sourceFile filename="src/animals/husbandry/RealisticLivestock_AnimalNameSystem.lua"/>
+        <sourceFile filename="src/animals/husbandry/RealisticLivestock_AnimalSystem.lua"/>
+        <sourceFile filename="src/animals/shop/controllers/AnimalScreenBase.lua"/>
+        <sourceFile filename="src/animals/shop/controllers/AnimalScreenDealer.lua"/>
+        <sourceFile filename="src/animals/shop/controllers/AnimalScreenDealerFarm.lua"/>
+        <sourceFile filename="src/animals/shop/controllers/AnimalScreenDealerTrailer.lua"/>
+        <sourceFile filename="src/animals/shop/controllers/AnimalScreenTrailer.lua"/>
+        <sourceFile filename="src/animals/shop/controllers/AnimalScreenTrailerFarm.lua"/>
+        <sourceFile filename="src/animals/shop/events/AIAnimalBuyEvent.lua"/>
+        <sourceFile filename="src/animals/shop/events/AIAnimalInseminationEvent.lua"/>
+		<sourceFile filename="src/animals/shop/events/AIAnimalSellEvent.lua"/>
+		<sourceFile filename="src/animals/shop/events/AIBulkMessageEvent.lua"/>
+        <sourceFile filename="src/animals/shop/events/AnimalBuyEvent.lua"/>
+		<sourceFile filename="src/animals/shop/events/AnimalInseminationEvent.lua"/>
+		<sourceFile filename="src/animals/shop/events/AnimalInseminationResultEvent.lua"/>
+        <sourceFile filename="src/animals/shop/events/AnimalMoveEvent.lua"/>
+        <sourceFile filename="src/animals/shop/events/AnimalSellEvent.lua"/>
+        <sourceFile filename="src/animals/shop/events/SemenBuyEvent.lua"/>
+        <sourceFile filename="src/animals/shop/AnimalItemNew.lua"/>
+        <sourceFile filename="src/animals/shop/RealisticLivestock_AnimalItemStock.lua"/>
+        <sourceFile filename="src/events/DewarManagerStateEvent.lua"/>
+        <sourceFile filename="src/events/HusbandryMessageStateEvent.lua"/>
+        <sourceFile filename="src/events/ReturnStrawEvent.lua"/>
+        <sourceFile filename="src/farms/FarmManager.lua"/>
+        <sourceFile filename="src/farms/RealisticLivestock_FarmStats.lua"/>
+        <sourceFile filename="src/fillTypes/RealisticLivestock_FillTypeManager.lua"/>
+		<sourceFile filename="src/gui/elements/DoubleOptionSliderElement.lua"/>
+        <sourceFile filename="src/gui/elements/RenderElement.lua"/>
+        <sourceFile filename="src/gui/elements/TripleOptionElement.lua"/>
+        <sourceFile filename="src/gui/RealisticLivestock_AnimalScreen.lua"/>
+        <sourceFile filename="src/gui/VisualAnimalsDialog.lua"/>
+        <sourceFile filename="src/gui/NameInputDialog.lua"/>
+        <sourceFile filename="src/gui/RealisticLivestockFrame.lua"/>
+        <sourceFile filename="src/gui/AnimalAIDialog.lua"/>
+        <sourceFile filename="src/gui/AnimalFilterDialog.lua"/>
+        <sourceFile filename="src/gui/AnimalInfoDialog.lua"/>
+        <sourceFile filename="src/gui/DiseaseDialog.lua"/>
+        <sourceFile filename="src/gui/EarTagColourPickerDialog.lua"/>
+		<sourceFile filename="src/gui/FileExplorerDialog.lua"/>
+		<sourceFile filename="src/gui/InGameMenuSettingsFrame.lua"/>
+		<sourceFile filename="src/gui/ProfileDialog.lua"/>
+        <sourceFile filename="src/gui/RL_InfoDisplayKeyValueBox.lua"/>
+        <sourceFile filename="src/gui/RealisticLivestock_InGameMenuAnimalsFrame.lua"/>
+        <sourceFile filename="src/handTools/specializations/HandToolHorseBrush.lua"/>
+        <sourceFile filename="src/handTools/HandTool.lua"/>
+        <sourceFile filename="src/handTools/HandToolSystem.lua"/>
+        <sourceFile filename="src/handTools/RLHandTools.lua"/>
+        <sourceFile filename="src/objects/Dewar.lua"/>
+        <sourceFile filename="src/placeables/RealisticLivestock_PlaceableSystem.lua"/>
+        <sourceFile filename="src/player/RealisticLivestock_PlayerHUDUpdater.lua"/>
+        <sourceFile filename="src/player/RealisticLivestock_PlayerInputComponent.lua"/>
+        <sourceFile filename="src/vehicles/specializations/RealisticLivestock_LivestockTrailer.lua"/>
+        <sourceFile filename="src/vehicles/specializations/Rideable.lua"/>
+        <sourceFile filename="src/vehicles/RealisticLivestock_VehicleSystem.lua"/>
+        <sourceFile filename="src/AIAnimalManager.lua"/>
+        <sourceFile filename="src/AIStrawUpdater.lua"/>
+        <sourceFile filename="src/AnimalBirthEvent.lua"/>
+        <sourceFile filename="src/AnimalDeathEvent.lua"/>
+        <sourceFile filename="src/AnimalMonitorEvent.lua"/>
+        <sourceFile filename="src/AnimalNameChangeEvent.lua"/>
+        <sourceFile filename="src/AnimalPregnancyEvent.lua"/>
+        <sourceFile filename="src/AnimalUpdateEvent.lua"/>
+        <sourceFile filename="src/DewarManager.lua"/>
+        <sourceFile filename="src/Disease.lua"/>
+        <sourceFile filename="src/DiseaseManager.lua"/>
+        <sourceFile filename="src/FSCareerMissionInfo.lua"/>
+        <sourceFile filename="src/I18N.lua"/>
+        <sourceFile filename="src/RealisticLivestock.lua"/>
+        <sourceFile filename="src/RealisticLivestock_Animal.lua"/>
+		<sourceFile filename="src/RealisticLivestock_FSBaseMission.lua"/>
+		<sourceFile filename="src/RLConsoleCommandManager.lua"/>
+        <sourceFile filename="src/RLMessage.lua"/>
+        <sourceFile filename="src/RLSettings.lua"/>
+        <sourceFile filename="src/RL_BroadcastSettingsEvent.lua"/>
+    </extraSourceFiles>
+    <l10n filenamePrefix="translations/translation"/>
+    <inputBinding>
+        <actionBinding action="VisualAnimalsDialog">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_t"/>
+        </actionBinding>
+    </inputBinding>
+    <actions>
+        <action name="VisualAnimalsDialog"/>
+    </actions>
+	<helpLines>
+
+		<category title="$l10n_rl_settings">
+
+			<page title="$l10n_rl_help_monitors_title" iconSliceId="rlHelpIcons.monitor">
+
+				<paragraph>
+					<text text="$l10n_rl_help_monitors_1"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_monitors_2"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_monitors_3"/>
+				</paragraph>
+				
+			</page>
+
+			<page title="$l10n_rl_help_pregnancy_title" iconSliceId="rlHelpIcons.pregnancy">
+
+				<paragraph>
+					<text text="$l10n_rl_help_pregnancy_1"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_pregnancy_2"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_pregnancy_3"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_pregnancy_4"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_pregnancy_5"/>
+				</paragraph>
+				
+			</page>
+
+			<page title="$l10n_rl_help_production_title" iconSliceId="rlHelpIcons.production">
+
+				<paragraph>
+					<text text="$l10n_rl_help_production_1"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_production_2"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_production_3"/>
+				</paragraph>
+				
+			</page>
+
+			<page title="$l10n_rl_help_weight_title" iconSliceId="gui.storeAttribute_maxLoadCapacity">
+
+				<paragraph>
+					<text text="$l10n_rl_help_weight_1"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_weight_2"/>
+				</paragraph>
+
+			</page>
+
+			<page title="$l10n_rl_help_genetics_title" iconSliceId="rlHelpIcons.genetics">
+
+				<paragraph>
+					<text text="$l10n_rl_help_genetics_1"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_genetics_2"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_genetics_3"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_genetics_4"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_genetics_5"/>
+				</paragraph>
+				<paragraph>
+					<text text="$l10n_rl_help_genetics_6"/>
+				</paragraph>
+				
+			</page>
+			
+		</category>
+		
+	</helpLines>
+</modDesc>
