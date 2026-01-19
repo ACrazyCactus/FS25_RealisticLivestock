@@ -93,10 +93,7 @@ function VisualAnimal:setBumId()
 	local uniqueId = self.animal.uniqueId or ""
 	if string.len(uniqueId) < 6 then
 		local paddedUniqueId = string.rep("0", 6 - string.len(uniqueId)) .. uniqueId
-		print(string.format("[RL][setBumId] uniqueId '%s' padded to '%s'", tostring(uniqueId), paddedUniqueId))
 		uniqueId = paddedUniqueId
-	else
-		print(string.format("[RL][setBumId] uniqueId '%s' length=%d", tostring(uniqueId), string.len(uniqueId)))
 	end
 
 	local digits = {
@@ -110,7 +107,6 @@ function VisualAnimal:setBumId()
 	local childNodes = {}
 	local hasAllChildren = true
 
-	print("[RL][setBumId] Resolving bumId child nodes for animal uniqueId=" .. tostring(uniqueId))
 
 	for i, name in ipairs(nodeNames) do
 		local child = getChild(self.nodes.bumId, name)
@@ -118,11 +114,9 @@ function VisualAnimal:setBumId()
 			childNodes[i] = child
 			local x, y, z = getWorldTranslation(child)
 			local rx, ry, rz = getWorldRotation(child)
-			print(string.format("[RL][setBumId] Found child '%s' (index=%d) nodeId=%s worldPos=(%.3f, %.3f, %.3f) worldRot=(%.3f, %.3f, %.3f)", name, i, tostring(child), x or -999, y or -999, z or -999, rx or -999, ry or -999, rz or -999))
 		else
 			childNodes[i] = nil
 			hasAllChildren = false
-			print(string.format("[RL][setBumId] Missing child '%s' (index=%d)", name, i))
 			break
 		end
 	end
@@ -130,21 +124,17 @@ function VisualAnimal:setBumId()
 	self.texts.bumId = { ["digits"] = {} }
 
 	if hasAllChildren then
-		print("[RL][setBumId] All child nodes present; mapping digits")
 		for i = 1, #digits do
 			local digitNode = childNodes[i]
 			local digitText = digits[i] ~= nil and digits[i] ~= "" and digits[i] or "-"
 			local lx, ly, lz = localToLocal(digitNode, getParent(digitNode) or digitNode, 0, 0, 0)
-			print(string.format("[RL][setBumId] Digit index=%d nodeId=%s text='%s' localPos=(%.3f, %.3f, %.3f)", i, tostring(digitNode), tostring(digitText), lx or -999, ly or -999, lz or -999))
 			self.texts.bumId.digits[i] = create3DLinkedText(digitNode, 0, 0, 0, 0, 0, 0, 0.05, digitText)
 		end
 	else
-		print("[RL][setBumId] Child nodes missing, falling back to stacked text")
 		self.texts.bumId.uniqueId = {
 			["top"] = create3DLinkedText(self.nodes.bumId, 0, -0.006, 0, 0, 0, 0, 0.05, string.sub(uniqueId, 3, 4)),
 			["bottom"] = create3DLinkedText(self.nodes.bumId, 0, -0.012, 0, 0, 0, 0, 0.05, string.sub(uniqueId, 5, 6))
 		}
-		print(string.format("[RL][setBumId] fallback top='%s' bottom='%s'", string.sub(uniqueId, 3, 4), string.sub(uniqueId, 5, 6)))
 	end
 
 end
