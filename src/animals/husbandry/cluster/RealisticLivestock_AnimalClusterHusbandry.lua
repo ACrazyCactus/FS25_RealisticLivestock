@@ -252,7 +252,7 @@ function RealisticLivestock_AnimalClusterHusbandry:updateVisuals(superFunc, remo
             animal.visualAnimalIndex = visualAnimalIndex
 
             self.animalIdToCluster[useTempId and tempHusbandryId or i][animalId] = animal
-
+            print(string.format("RealisticLivestock: Gender:%s Breed:%s Age:%d %s created with visual index %d", animal.gender, animal.breed, animal.age, animal.idFull, animal.visualAnimalIndex))
             animal:createVisual(self.husbandryIds[useTempId and tempHusbandryId or i], animalId)
             animal:setVisualEarTagColours(colours.earTagLeft, colours.earTagLeft_text, colours.earTagRight, colours.earTagRight_text)
 
